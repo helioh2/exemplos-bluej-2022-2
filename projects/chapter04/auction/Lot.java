@@ -2,8 +2,8 @@
  * A class to model an item (or set of items) in an
  * auction: a lot.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kolling.
+ * @version 2008.03.30
  */
 public class Lot
 {
@@ -23,7 +23,6 @@ public class Lot
     {
         this.number = number;
         this.description = description;
-        this.highestBid = null;
     }
 
     /**
@@ -34,18 +33,13 @@ public class Lot
      */
     public boolean bidFor(Bid bid)
     {
-        if(highestBid == null) {
-            // There is no previous bid.
-            highestBid = bid;
-            return true;
-        }
-        else if(bid.getValue() > highestBid.getValue()) {
-            // The bid is better than the previous one.
+        if((highestBid == null) ||
+               (bid.getValue() > highestBid.getValue())) {
+            // This bid is the best so far.
             highestBid = bid;
             return true;
         }
         else {
-            // The bid is not better.
             return false;
         }
     }

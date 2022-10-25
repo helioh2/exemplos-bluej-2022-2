@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * A simple model of an auction.
  * The auction maintains a list of lots of arbitrary length.
  *
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kolling.
+ * @version 2008.03.30
  */
 public class Auction
 {
@@ -20,7 +20,7 @@ public class Auction
      */
     public Auction()
     {
-        lots = new ArrayList<>();
+        lots = new ArrayList<Lot>();
         nextLotNumber = 1;
     }
 
@@ -45,20 +45,18 @@ public class Auction
     }
     
     /**
-     * Make a bid for a lot.
-     * A message is printed indicating whether the bid is
-     * successful or not.
-     * 
-     * @param lotNumber The lot being bid for.
+     * Bid for a lot.
+     * A message indicating whether the bid is successful or not
+     * is printed.
+     * @param number The lot number being bid for.
      * @param bidder The person bidding for the lot.
      * @param value  The value of the bid.
      */
-    public void makeABid(int lotNumber, Person bidder, long value)
+    public void bidFor(int lotNumber, Person bidder, long value)
     {
         Lot selectedLot = getLot(lotNumber);
         if(selectedLot != null) {
-            Bid bid = new Bid(bidder, value);
-            boolean successful = selectedLot.bidFor(bid);
+            boolean successful = selectedLot.bidFor(new Bid(bidder, value));
             if(successful) {
                 System.out.println("The bid for lot number " +
                                    lotNumber + " was successful.");

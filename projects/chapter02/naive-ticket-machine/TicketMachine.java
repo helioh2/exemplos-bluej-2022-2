@@ -6,8 +6,8 @@
  * to insert enough money before trying to print a ticket.
  * It also assumes that users enter sensible amounts.
  *
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kolling
+ * @version 2008.03.30
  */
 public class TicketMachine
 {
@@ -23,9 +23,9 @@ public class TicketMachine
      * Note that the price must be greater than zero, and there
      * are no checks to ensure this.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int ticketCost)
     {
-        price = cost;
+        price = ticketCost;
         balance = 0;
         total = 0;
     }
@@ -48,7 +48,7 @@ public class TicketMachine
     }
 
     /**
-     * Receive an amount of money from a customer.
+     * Receive an amount of money in cents from a customer.
      */
     public void insertMoney(int amount)
     {

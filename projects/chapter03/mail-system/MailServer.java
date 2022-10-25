@@ -5,9 +5,8 @@ import java.util.Iterator;
 /**
  * A simple model of a mail server. The server is able to receive
  * mail items for storage, and deliver them to clients on demand.
- * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kolling
+ * @version 2008.03.30
  */
 public class MailServer
 {
@@ -20,7 +19,7 @@ public class MailServer
      */
     public MailServer()
     {
-        items = new ArrayList<>();
+        items = new ArrayList<MailItem>();
     }
 
     /**

@@ -6,8 +6,8 @@
  * sensible amounts of money, and will only print a ticket
  * if enough money has been input.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kolling
+ * @version 2008.03.30
  */
 public class TicketMachine
 {
@@ -21,9 +21,9 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int ticketCost)
     {
-        price = cost;
+        price = ticketCost;
         balance = 0;
         total = 0;
     }
@@ -46,7 +46,7 @@ public class TicketMachine
     }
 
     /**
-     * Receive an amount of money from a customer.
+     * Receive an amount of money in cents from a customer.
      * Check that the amount is sensible.
      */
     public void insertMoney(int amount)
@@ -55,7 +55,7 @@ public class TicketMachine
             balance = balance + amount;
         }
         else {
-            System.out.println("Use a positive amount rather than: " +
+            System.out.println("Use a positive amount: " +
                                amount);
         }
     }
@@ -78,7 +78,7 @@ public class TicketMachine
 
             // Update the total collected with the price.
             total = total + price;
-            // Reduce the balance by the price.
+            // Reduce the balance by the prince.
             balance = balance - price;
         }
         else {

@@ -1,9 +1,8 @@
 /**
  * A class to model a simple email client. The client is run by a
  * particular user, and sends and retrieves mail via a particular server.
- * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author David J. Barnes and Michael Kolling
+ * @version 2008.03.30
  */
 public class MailClient
 {

@@ -3,8 +3,8 @@
  * The Student class represents a student in a student administration system.
  * It holds the student details relevant in our context.
  * 
- * @author Michael Kölling and David Barnes
- * @version 2016.02.29
+ * @author Michael Kolling and David Barnes
+ * @version 2008.03.30
  */
 public class Student
 {
@@ -80,6 +80,6 @@ public class Student
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + " (" + id + ")");
     }
 }
